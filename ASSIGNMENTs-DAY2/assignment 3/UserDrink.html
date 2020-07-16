@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+      <title>Input from user 1</title>
+      <link rel="stylesheet" href="DrinkCSS.css">
+</head>
+<body>
+    <h1 id="h11">Taking Input from the User and printing appropriate message</h1>
+    <p class="class1">Type your age in prompt to know if you are eligible to drink</p>
+    <button id="btn" onclick="fn()"><b>Click Here</b></button>
+    <p id="p1" class="class1"></p>
+</body>
+<script type="text/javascript">
+function fn(){
+    var x = window.prompt("Type your age :");
+    if(x<21 && x>0){
+      console.log("User is not eligible to drink ("+x+")");
+      document.getElementById("p1").innerHTML = "Message printed in the console";
+    }
+    else if (x>=21 && x<100) 
+    {
+      console.log("User is eligible to drink ("+x+")");
+      document.getElementById("p1").innerHTML = "Message printed in the console";
+    }  
+    else
+       document.getElementById("p1").innerHTML = "Type valid age";
+}
+    
+
+
+
+</script>
+</html>

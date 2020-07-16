@@ -1,0 +1,19 @@
+body{
+    background-color: slategray;
+}
+
+#h11{
+    color: snow;
+}
+
+.my{
+    color: blanchedalmond;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 23px;
+}
+
+#btn{
+    background-color: black;
+    color: blanchedalmond;
+    padding: 5px;
+}

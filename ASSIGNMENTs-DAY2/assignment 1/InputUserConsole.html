@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Input from User</title>
+    <link rel="stylesheet" href="InputUserCSS.css">
+</head>
+<body>
+    <h1 id="h11">Javascript code to take input from user and printing it on the Console</h1>
+    <p  class="my">Type anything as an input.</p>
+    <button id="btn" onclick="fn()">Click Here</button>
+    <p id="p1" class="my"></p>
+</body>
+<script type="text/javascript">
+function fn(){
+   var x = window.prompt("Type Anything : ");
+   console.log("Input from user : "+x);
+   if(x.trim()=="")
+   document.getElementById("p1").innerHTML = "Type valid input";
+   else
+   document.getElementById("p1").innerHTML = "Input from user is  printed in the console";
+}
+
+</script>
+</html>

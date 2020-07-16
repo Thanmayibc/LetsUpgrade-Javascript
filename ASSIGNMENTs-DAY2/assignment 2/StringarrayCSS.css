@@ -1,0 +1,20 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.btn{
+    background-color: black;
+    color: blanchedalmond;
+    border: black;
+}
+
+p{
+    font-size: 23px;
+}
+
+h2{
+    font-size: 30px;
+}
+h1{
+    font-size: 35px;
+}
