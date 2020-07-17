@@ -1,0 +1,14 @@
+body{
+   text-align: center;
+   background-color: rgb(13, 29, 59);
+}
+
+h1,h2,p{
+    color: ghostwhite;
+}
+
+::placeholder,#btn{
+    color: ghostwhite;
+    background-color: black;
+    border: black;
+}

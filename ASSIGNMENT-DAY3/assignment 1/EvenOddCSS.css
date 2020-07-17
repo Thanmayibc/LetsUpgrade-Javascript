@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+
+h1,h2,p{
+    color: ghostwhite;
+}
+
+::placeholder,button{
+    background-color: ghostwhite;
+    border: ghostwhite;
+    color: black;
+    font-size: 15px;
+}
+
+p{
+    font-size: 23px;
+}

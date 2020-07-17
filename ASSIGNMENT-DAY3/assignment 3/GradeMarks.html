@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grades</title>
+    <link rel="stylesheet" href="GradeCSS.css">
+</head>
+<body>
+    <h1>Grades for respective Marks</h1>
+    <h2>Using Conditional Statements</h2>
+    <p>Type your score :</p>
+    <input id="i1" placeholder="Your Marks">
+    <br><br>
+    <button onclick="fn()">Submit</button>
+    <p id="p1"></p>
+    <br>
+    <h2>Using Switch Statements</h2>
+    <p>Type your score : </p>
+    <input id="i2" placeholder="Your Marks">
+    <br><br>
+    <button onclick="fn1()">Submit</button>
+    <p id="p2"></p>
+
+</body>
+<script src="GradeJS.js"></script>
+<script type="text/javascript">
+function fn(){
+    var x = document.getElementById("i1").value;
+    if(x<=100 && x>=90)
+    {
+        console.log("Marks : "+x+" Grade : A");
+        document.getElementById("p1").innerHTML = "Message printed in the console";
+    }
+    else if(x<=89 && x>=80)
+    {
+        console.log("Marks : "+x+" Grade : B");
+        document.getElementById("p1").innerHTML = "Message printed in the console";
+
+    }
+     else if(x<=79 && x>=70)
+    {
+        console.log("Marks : "+x+" Grade : c");
+        document.getElementById("p1").innerHTML = "Message printed in the console";
+
+    }
+     else if(x<=69 && x>=60)
+    {
+        console.log("Marks : "+x+" Grade : D");
+        document.getElementById("p1").innerHTML = "Message printed in the console";
+
+    }
+     else if(x<=59 && x>=50)
+    {
+        console.log("Marks : "+x+" Grade : E");
+        document.getElementById("p1").innerHTML = "Message printed in the console";
+
+    }
+     else if(x<=49 && x>=0)
+    {
+        console.log("Marks : "+x+" Grade : F(Fail)");
+        document.getElementById("p1").innerHTML = "Message printed in the console";
+
+    }
+    else
+    document.getElementById("p1").innerHTML = "Type valid marks";
+
+}
+
+
+
+
+</script>
+
+</html>

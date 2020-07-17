@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <title>Even or Odd</title>
+       <link rel="stylesheet" href="EvenOddCSS.css">
+</head> 
+<body>
+    <h1>To find a number is even or odd</h1>
+    <br><br>
+    <input id="i1" type="number" placeholder="Enter a number">
+    <br><br>
+    <button onclick="fn()">Submit</button>
+    <p id="p1"></p>
+</body>
+<script type="text/javascript">
+function fn(){
+    var x = document.getElementById("i1").value;
+
+    if(x%2==0)
+    {
+        console.log("Number : "+x+" , It is even");
+        document.getElementById("p1").innerHTML = "Message printed in the console";
+    }
+    else if(x%2 != 0)
+    {
+        console.log("Number : "+x+" , It is odd");
+        document.getElementById("p1").innerHTML = "Message printed in the console";
+    }
+    else
+       document.getElementById("p1").innerHTML = "Type valid number";
+
+}
+
+</script>
+</html>

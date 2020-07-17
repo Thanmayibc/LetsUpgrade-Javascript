@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+    background-color: rgb(167, 184, 184)
+ }
+
+h1,h2,p{
+     color: rgb(83, 3, 3);
+}
+
+p{
+    font-size: 23px;
+}
+
+::placeholder,button{
+    background-color: darkred;
+    border: darkred;
+    color: ghostwhite;
+}
