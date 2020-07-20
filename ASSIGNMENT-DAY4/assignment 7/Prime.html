@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <title>Prime Numbers</title>
+</head>
+<body>
+   <h1>Printing Prime Numbers</h1> 
+   <p>Enter a number (to print prime numbers upto required number)</p>
+   <input id="i1" type="number" placeholder="Number">
+   <button id="btn" onclick="fn()">Submit</button>
+   <br><br>
+   <p id="p1"></p>
+</body>
+<script type="text/javascript">
+function fn(){
+    var x  = document.getElementById("i1").value;
+    var count = 0 ;
+    for(var j=2 ; j<=x ; j++) {
+        for(i = 1 ; i<=j ;i++){
+            if(j%i==0 )
+               count++;
+        }
+        
+             if(count==2)
+             {
+             console.log(j);
+             count = 0 ;
+            }
+            else 
+             count = 0;
+    }
+    document.getElementById("p1").innerHTML = "Numbers printed in the console";
+}
+
+</script>
+</html>

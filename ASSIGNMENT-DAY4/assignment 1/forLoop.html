@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>For Loop</title>
+</head>
+<body style="text-align: center;">
+    <h1 style="font-size: 35px;">Example to illustrate For Loop</h1>
+    <button id="btn" onclick="fn()" style="font-size: 23px;">Click Here</button>
+    <p id="p1" style="font-size: 23px;"></p>
+</body>
+<script type="text/javascript">
+
+function fn()
+{
+   for(var i = 1; i<=100;i++){
+       if(i%3==0)
+           console.log("Fizz ("+i+")");
+        if(i%5==0)
+        console.log("Buzz ("+i+")");
+        if(i%3==0 && i%5==0)
+        console.log("FizzBuzz ("+i+")");
+   }
+   document.getElementById("p1").innerHTML = "For loop illustrated in the console";
+
+}
+</script>
+</html>

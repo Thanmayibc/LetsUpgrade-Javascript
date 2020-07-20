@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Input from User</title>
+</head>
+<body style="text-align: center;">
+    <h1 style="font-size: 35px;">Taking input from User</h1>
+    <br>
+    <button onclick="fn()" style="font-size: 23px;">Click to give an input</button>
+    <p id="pa" style="font-size: 23px;"></p>
+</body>
+<script type="text/javascript">
+function fn(){
+        var x;
+        do{
+            x =  window.prompt("Enter number greater than 100 : ");
+            if(x===null || isNaN(x) || x==""){
+            document.getElementById("pa").innerHTML = "prompt closed";
+            break;
+            }
+            if(x>100){
+                document.getElementById("pa").innerHTML = "Number : "+x;
+                break
+              }
+        }while(x<=100);
+}
+
+
+
+</script>
+</html>

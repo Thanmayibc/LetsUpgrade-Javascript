@@ -1,0 +1,11 @@
+body{
+    text-align: center;
+}
+
+h1{
+    font-size: 35px;
+}
+
+p,input,select,button{
+    font-size: 23px;
+}

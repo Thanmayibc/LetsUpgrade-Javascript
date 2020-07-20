@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>SALES</title>
+</head>
+<body>
+    <h1>Illustration of Calculating  total  Sales Commission</h1>
+    <p>Enter the Amount of Sales : </p>
+    <input id="i1" type="number" placeholder="Amount">
+    <button id="btn" onclick="fn()">Submit</button>
+    <p id="p1"></p>
+</body>
+<script type="text/javascript">
+function fn(){
+    var x = document.getElementById("i1").value;
+    var com = 0;
+    if(x==0){
+       document.getElementById("p1").innerHTML = "No commission";
+    }
+    else{   
+    if(x>0 && x<=5000)
+    {
+        com = x * 0.02;
+        document.getElementById("p1").innerHTML = "Total commission : "+com;
+    }
+    else if(x>=5001 && x<=10000){
+        com = (5000 * 0.02) + ((x - 5000) * 0.05);
+        document.getElementById("p1").innerHTML = "Total commission : "+com;
+    }
+    else if(x>=10001 && x<=20000){
+        com = (5000 * 0.02) + (5000 * 0.05) +  ((x - 10000) * 0.07);
+        document.getElementById("p1").innerHTML = "Total commission : "+com;
+    }
+    else{
+        com = (5000 * 0.02) + (5000 * 0.05) + (10000 * 0.07) + ((x - 20000) * 0.1);
+        document.getElementById("p1").innerHTML = "Total commission : "+com;
+    }
+    }  
+
+
+}
+
+
+</script>
+</html>

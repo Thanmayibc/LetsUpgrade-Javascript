@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Destructuring Objects</title>
+</head>
+<body style="font-size: 30px;">
+    <h1>Example to Illustrate Destructuring of Objects</h1>
+    <button onclick="fn()" style="font-size: 23px;">Click</button>
+    <p id="p1" style="font-size: 23px;"></p>
+</body>    
+<script type="text/javascript">
+function fn(){
+   var student  = {
+        name : "Helsinki",
+        age : 24,
+        projects : {
+            diceGame : "Two player dice game using javascript",
+            skills : {
+                programLang : "python"
+            }
+        }
+    };
+
+    const { name,age,projects : {diceGame,skills : {programLang} } } = student;
+    document.getElementById("p1").innerHTML = " "+name+",  "+age+",  "+diceGame+",  "+programLang;
+
+}
+
+
+</script>
+</html>

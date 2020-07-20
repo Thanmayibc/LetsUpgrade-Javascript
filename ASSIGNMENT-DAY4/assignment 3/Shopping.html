@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Spread Operator</title>
+      <link rel="stylesheet" href="ShopCSS.css">
+</head>
+<body>
+      <h1>Illustrating spread operator using array</h1> 
+      <p>Grocery List : </p>
+      <button id="btn" onclick="fn()">Click</button>
+      <p id="p1"></p>
+      <p id="p3"></p>
+      <p id="p2"></p>
+
+
+</body>
+<script type="text/javascript">
+function fn(){
+    var shoppingList = ["Bread"," Rice"," Sauces"," Eggs"];
+    document.getElementById("p1").innerHTML = shoppingList;
+    document.getElementById("p3").innerHTML = "New Grocery List : ";
+
+    var shoppingBasket = [...shoppingList];
+    shoppingBasket.push(" Cereals"," Seafood"," Pasta");
+    document.getElementById("p2").innerHTML = shoppingBasket;
+}
+</script>
+</html>

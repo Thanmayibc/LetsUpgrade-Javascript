@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Arrow Function</title>
+</head>
+<body>
+    <h1>Code to illustrate Arrow Function</h1>
+    <p>Code : </p>
+    <button onclick="fn()">Click</button>
+    <p id="p1"></p>
+</body>
+<script type="text/javascript">
+function fn(){
+    var  ask  = (question,yes,no) => { if(confirm (question)) {yes();}  else no(); }  ;
+
+    ask("Do you agree?" , yes => alert("You agreed."),no=>alert("You cancelled execution"));
+}
+
+
+</script>
+</html>
