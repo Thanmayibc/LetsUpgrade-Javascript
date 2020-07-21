@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>User Admin</title>
+</head>
+<body>
+    <h1>User Admin Moderator</h1>
+    <p>Information in the console.</p>
+</body>
+<script type="text/javascript">
+class User{
+            constructor(name,age,email){
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                this.coins=0;
+                this.courses=[];
+            }
+            login()
+            {
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout()
+            {
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+        }
+        class Moderator extends User
+        {
+            constructor(name,age,email,role)
+            {
+                super(name,age,email);
+                this.role="Moderator";
+            }
+            addCoins(user,coin){
+                user.coins += coin;
+                console.log(user); 
+                return this;
+            }
+            removeCoins(user,coin){
+                user.coins -=coin;
+                console.log(user); 
+                return this;
+            }
+        }
+        class Admin extends Moderator
+        {
+            addCourse(user,course)
+            {
+                user.courses.push(course);
+                console.log(user);
+            }
+            removeCourse(user,course)
+            {
+                user.courses.pop(course);
+                console.log(user);
+            }
+        }
+        let user1 = new User('Thanmayi BC',21,'thanmayibc@gmail.com');
+        let user2 = new User('Riya',15,'riya2000@gmail.com');
+        let user3 = new User('Ishika',31,'ishika@gmail.com');
+        let mod1 = new Moderator('Raj',27,'raj34@gmail.com');
+        let mod2 = new Moderator('Shashwath',25,'shash43@gmail.com');
+        let adm1 = new Admin('Rohan',30,'rohan123@gmail.com');
+
+        let users = [user1,user2,user3,mod1,mod2,adm1];
+        users.forEach(el=>{
+            console.log(el);
+        });
+
+        mod1.addCoins(user1,10);
+        mod1.removeCoins(user1,1);
+
+        adm1.addCourse(user1,'ruby');
+        adm1.addCourse(user1,'oracle');
+        adm1.addCourse(user1,'c++');
+        // adm1.removeCourse(user1,'js');
+</script>
+</html>

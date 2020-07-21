@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <title>Higher Order Function</title>
+</head>
+<body style="text-align: center;">
+    <h1>Code to illustrate Higher Order Function </h1>
+    <p>Enter postive  numbers in the prompt to from an array : </p>
+    <button  onclick="fn()">Click</button>
+    <br><br>
+    <p id="p1"></p>
+</body>
+<script type="text/javascript">
+function fn(){
+    var i=0,x,ele;
+         x =  Number(window.prompt("Enter size of array : ")); 
+         var arr = new Array(x);
+
+        for(i=0;i<x;i++){
+            arr[i] =  Number(window.prompt("Enter Number : "));
+        }
+        console.log("Array created from inputs given by User : ");
+        console.log(arr);
+
+        var odd = arr.filter(function(ele){ return ele%2 != 0 });
+        console.log("Odd numbers from the Array : ");
+        console.log(odd);
+
+        var cube =  odd.map(function(ele){return ele*ele*ele});
+        console.log("Cube values from the Odd Array : ");
+        console.log(cube);
+
+       document.getElementById("p1").innerHTML = "Array printed in the console";
+}
+
+
+
+
+</script>
+</html>
+
