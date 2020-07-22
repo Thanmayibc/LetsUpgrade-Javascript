@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <title>Background Color</title>
+</head>
+<body id="b1" style="text-align: center; background-color: black;">
+    <br><br><br><br>
+    <button style="font-size: 23px;" id="btn" onclick="change()">Click to change Background Color</button>
+    <br><br>
+    <button  style="font-size: 23px;" id="btn1" onclick="stop()">Click to Stop</button>
+
+</body>
+<script type="text/javascript">
+var i=0,ID1;
+function fn(){
+
+     function background(){
+    var x = document.getElementById("b1");
+    var arr = ["red","cadetblue","cornsilk","yellow","green","blueviolet"];
+    x.style.backgroundColor = arr[i];
+}
+background();
+i++;
+}
+function change(){
+
+    ID1 = window.setInterval(fn,5000);
+}
+
+function stop(){
+    window.clearInterval(ID1);
+}
+
+</script>
+</html>

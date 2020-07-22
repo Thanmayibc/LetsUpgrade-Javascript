@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Welcome</title>
+</head>
+<body style="text-align: center;">
+    <h1>First WebPage</h1>
+    <br>
+    <input id="i1" placeholder="Enter Name">
+    <button id="btn" onclick="fn()">Click</button>
+    <h2 id="h21"></h2>
+    <p id="p1"></p>
+    <form   action="Welcome.html">
+        <button id="btn" >Redirect</button>
+
+    </form>
+
+</body>
+<script type="text/javascript">
+function fn(){
+       var x = document.getElementById("i1").value;
+       document.getElementById("h21").innerHTML = "Welcome "+x+" !!";
+       document.getElementById("p1").innerHTML = "Click the button to get redirected to another page";
+
+
+}
+</script>
+</html>

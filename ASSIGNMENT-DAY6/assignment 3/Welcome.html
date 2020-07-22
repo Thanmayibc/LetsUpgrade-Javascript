@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Welcome 1</title>
+      <link rel="stylesheet" href="ClockCSS.css">
+</head>
+<body id="b1" style="text-align: center; font-size: 23px;">
+    <h1>Second WebPage</h1>
+    <br>
+    <h2>Clock : </h2>
+    <h2 id="h"></h2>
+    <br><br>
+    <button onclick="dark()" style="font-size: 23px;">Dark Mode</button>
+</body>
+<script type="text/javascript">
+function clock(){
+   var date =  new Date();
+   var time = date.toLocaleTimeString();
+   document.getElementById("h").innerHTML = time;
+
+}
+clock();
+setInterval(clock,1000);
+
+function dark(){
+    var x = document.getElementById("b1");
+    x.classList.add("black");
+    x.classList.remove("black");
+    x.classList.toggle("black");
+}
+</script>
+</html>

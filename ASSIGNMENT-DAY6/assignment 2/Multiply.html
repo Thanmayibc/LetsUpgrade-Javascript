@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Multiplication Table</title>
+</head>
+<body style="text-align: center;">
+    <h1>Multiplication Table</h1>
+    <br>
+    <p style="font-size: 23px;">Enter a number to get its Multiplication Table</p>
+    <input id="i1" type="number" placeholder="Enter Number" style="font-size: 23px;">
+    <br>
+    <input id="i2" type="number" placeholder="Enter Starting Number" style="font-size: 23px;">
+    <br>
+    <input id="i3" type="number" placeholder="Enter Ending Number" style="font-size: 23px;">
+    <br><br>
+    <button onclick="fn()" style="font-size: 23px;">Submit</button>
+    <p id="p1" style="font-size: 23px;font-weight: bold;"></p>
+  
+</body>
+<script type="text/javascript">
+function fn(){
+     var x = document.getElementById("i1").value;
+     var y = Number(document.getElementById("i2").value);
+     var z = Number(document.getElementById("i3").value);
+     var i;
+     var text = "";
+     for(i=y;i<=z;i++){
+     text = text + x + " * " + " "+i + " = "+ ""+(x*i)+"<br><br>";
+    }
+    document.getElementById("p1").innerHTML = text;
+
+}
+
+
+</script>
+</html>
