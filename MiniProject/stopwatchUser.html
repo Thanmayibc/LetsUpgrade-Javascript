@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>StopWatch and Timer</title>
+        <link rel="stylesheet" href="watchUserCSS.css">
+
+</head>
+<body>
+    <h1>Illustration of StopWatch With User Input</h1>
+    <br><br>
+    <p id="msg"></p>
+
+    <button onclick="start()">START</button>
+    <button onclick="reset()">RESET</button>
+    <br><br>
+    <p id="demo3"></p>
+    <br><br>
+    <button onclick="resume()">RESUME</button>
+    <button onclick="pause()">PAUSE</button>
+
+</body>
+<script type="text/javascript">
+  var sec1 = localStorage.getItem("key1");
+  var min1 = localStorage.getItem("key2");
+ var centi1 = localStorage.getItem("key3");
+var sec=0,min=0,centi=0;
+const s = 0;
+const m = 0;
+const c = 0;
+  var ID1=0;
+  function start(){
+           window.clearInterval(ID1);
+            ID1 = window.setInterval(function(){ var display = document.getElementById("demo3");
+           // var message = " "+min+" : "+" "+sec+" : "+" "+centi;
+           // display.innerHTML = message;
+            if(centi>=100){
+                centi=0;
+                sec=sec+1;
+            }
+            if(sec>=60){
+                sec=1;
+                min=min+1;
+            }
+            if(sec==sec1 && centi==centi1 && min==min1){
+                document.getElementById("msg").innerHTML = "TIME'S UP !";
+                window.clearInterval(ID1);
+            }
+            var message = " "+min+" : "+" "+sec+" : "+" "+centi;
+            display.innerHTML = message;
+            centi++;
+
+        },10);
+            
+  }
+               function pause(){
+                 window.clearInterval(ID1);
+                ID1=null;
+             }
+              function resume(){
+                 if(ID1==null) start();
+             }
+             function reset(){
+              window.clearInterval(ID1);
+              var display = document.getElementById("demo3");
+              var message = "0 : 0 : 0";
+              display.innerHTML = message;
+              sec = s;
+              min = m;
+              centi = c;
+
+             }
+
+
+
+
+
+</script>
+</html>

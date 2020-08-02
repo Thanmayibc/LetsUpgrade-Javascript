@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>StopWatch and Timer</title>
+        <link rel="stylesheet" href="watchCSS.css">
+</head>
+<body>
+    <h1>Illustration of  StopWatch</h1>
+    <br><br>
+    <br><br>
+
+    <button onclick="start()">START</button>
+    <button onclick="restart()">RESET</button>
+    <br><br>
+    <p id="demo3"></p>
+    <br><br>
+    <button onclick="resume()">RESUME</button>
+    <button onclick="pause()">PAUSE</button>
+
+
+
+</body>
+<script type="text/javascript">
+
+
+  var ID1=0;
+  var centi=0,min=0,sec=0;
+  function start(){
+           window.clearInterval(ID1);
+            ID1 = window.setInterval(function(){ var display = document.getElementById("demo3");
+            var message = " "+min+" : "+" "+sec+" : "+" "+centi;
+            display.innerHTML = message;
+            if(centi>100){
+                centi=1;
+            }
+            if(sec>60){
+                sec=1;
+            }
+             if(centi==100)
+            {
+              centisec=1;
+              sec = sec+1;
+            }
+            if(sec==60){
+                sec=1;
+                min = min+1;
+            }
+            centi++;
+
+        },10);
+            
+  }
+               function pause(){
+                 window.clearInterval(ID1);
+                ID1=null;
+             }
+              function resume(){
+                 if(ID1==null) start();
+             }
+             function restart(){
+              window.clearInterval(ID1);
+              var display = document.getElementById("demo3");
+              centi=0,min=0,sec=0;
+              var message = "0 : 0 : 0";
+              display.innerHTML = message;
+
+             }
+
+
+
+
+
+
+</script>
+</html>

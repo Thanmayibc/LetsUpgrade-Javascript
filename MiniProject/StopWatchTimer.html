@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>StopWatch and Timer</title>
+        <link rel="stylesheet" href="WatchTimerCSS.css">
+</head>
+<body>
+    <h1>Illustration of StopWatch and Timer</h1>
+    <br><br>
+    <h2>TIMER : </h2>
+    <form  onsubmit="return fn()"  action="Timer.html">
+    <input id="in1" placeholder="Enter second" type="number">
+    <input id="in2" placeholder="Enter minute" type="number">
+    <input id="in3" placeholder="Enter hour" type="number">
+    <button>Submit</button>
+    </form>
+    <p id="p1"></p>
+    <br><br>
+    <h2>STOPWATCH WITH USER INPUT : </h2>
+    <form  onsubmit="return fn1()"  action="watchUser.html">
+    <input id="in4" placeholder="Enter second" type="number">
+    <input id="in5" placeholder="Enter minute" type="number">
+    <input id="in6" placeholder="Enter centisecond" type="number">
+    <button>Submit</button>
+    </form>
+    <p id="p2"></p>
+    <br><br>
+    <h2>STOPWATCH : </h2>
+    <form action="stopwatch.html">
+    <button>Click Here</button>
+    </form>
+
+
+</body>
+<script type="text/javascript">
+
+function fn(){
+           var  x = Number(document.getElementById("in1").value);
+           var  y = Number(document.getElementById("in2").value);
+            var  z = Number(document.getElementById("in3").value);
+            if(x<60 && y<60 && z<60 && x>-1 && y>-1 && z>-1){
+             localStorage.setItem("key1",x);
+             localStorage.setItem("key2",y);
+             localStorage.setItem("key3",z);
+            return true;
+            }
+            else{
+                document.getElementById("p1").innerHTML = "Enter Valid Input";
+                return false;
+
+            }
+
+}
+
+function fn1(){
+           var  x = Number(document.getElementById("in4").value);
+           var  y = Number(document.getElementById("in5").value);
+            var  z = Number(document.getElementById("in6").value);
+            if(x<60 && y<60 && z<100 && x>-1 && y>-1 && z>-1){
+             localStorage.setItem("key1",x);
+             localStorage.setItem("key2",y);
+             localStorage.setItem("key3",z);
+            return true;
+            }
+            else{
+                document.getElementById("p2").innerHTML = "Enter Valid Input";
+                return false;
+
+            }
+
+}
+
+
+          
+
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    font-size: 23px;
+    background-color : maroon;
+    color: mintcream;
+    font-weight: bold;
+}
+
+input,button{
+    font-size: 23px;
+    font-weight: bold;
+    color: mintcream;
+    background-color: black;
+    border: black;
+}
+
+p{
+    font-size: 25px;
+    font-weight: bold;
+    color: mintcream;
+}
+

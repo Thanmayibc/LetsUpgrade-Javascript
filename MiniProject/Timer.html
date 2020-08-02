@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>StopWatch and Timer</title>
+        <link rel="stylesheet" href="timerCSS.css">
+
+</head>
+<body>
+    <h1>Illustration of  Timer</h1>
+    <br><br>
+    <p id="msg"></p>
+
+    
+    <button id="b1" onclick="start()">START</button>
+    <button  id="b2" onclick="reset()">RESET</button>
+    <br>
+    <p id="demo3"></p>
+
+    <br>
+    <button  id="b3"  onclick="resume()">RESUME</button>
+    <button  id="b4" onclick="pause()">PAUSE</button>
+
+
+</body>
+<script type="text/javascript">
+  var sec = localStorage.getItem("key1");
+  var min = localStorage.getItem("key2");
+ var hour = localStorage.getItem("key3");
+
+const s =sec;
+const m = min;
+const h = hour;
+  var ID1=0;
+  function start(){
+  
+           window.clearInterval(ID1);
+      
+            ID1 = window.setInterval(function(){ var display = document.getElementById("demo3");
+        
+            var message = " "+hour+" : "+" "+min+" : "+" "+sec;
+            display.innerHTML = message;
+            if(sec== 0 && min==0 && hour==0){
+              document.getElementById("msg").innerHTML = "TIME'S UP !";
+               window.clearInterval(ID1);
+            }
+            else if(sec==0)
+            {
+              sec=60;
+              min = min-1;
+            }
+            else if(sec== 0 && min==0){
+              sec=60;
+              min = 60;
+              hour = hour-1;
+            }
+            sec--;
+
+            
+          
+        
+            },1000);
+  }
+               function pause(){
+                window.clearInterval(ID1);
+                ID1=null;
+             }
+              function resume(){
+                 if(ID1==null) start();
+             }
+             function reset(){
+              window.clearInterval(ID1);
+              var display = document.getElementById("demo3");
+              var message = "0 : 0 : 0";
+              display.innerHTML = message;
+              sec = s;
+              min = m;
+              hour = h;
+
+             }
+
+
+
+
+
+
+</script>
+</html>
